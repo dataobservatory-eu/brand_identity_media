@@ -35,6 +35,11 @@ kable(
 | orange     | \#E88500 |
 | magenta    | \#E4007F |
 
+## Fonts
+
+In headings please use `Roboto`. In text, you can use `Roboto Light` or
+`Roboto Condensed`, or similar fonts.
+
 ## Installation
 
 If you want to use in the palette in R, for example, in ggplot2, you
