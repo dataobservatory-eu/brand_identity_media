@@ -56,6 +56,10 @@ kable(
 )
 ```
 
+## Fonts
+
+In headings please use `Roboto`.  In text, you can use `Roboto Light` or `Roboto Condensed`, or similar fonts.
+
 ## Installation
 
 If you want to use in the palette in R, for example, in ggplot2, you need to install the development version of reprextemplates from [GitHub](https://github.com/) with:
