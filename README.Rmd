@@ -1,0 +1,76 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+library(knitr)
+```
+
+# Reprex & Observatories Brand Identiy
+
+<!-- badges: start -->
+[![dataobservatory](https://img.shields.io/badge/ecosystem-dataobservatory.eu-3EA135.svg)](https://dataobservatory.eu/)
+
+<!-- badges: end -->
+
+
+```{r templateexample, message=FALSE, echo=FALSE}
+library(dplyr)
+library(ggplot2)
+library(reprextemplates)
+
+data.frame (
+  Color = names(reprex_palette()), 
+  HEX = as.character(reprex_palette()),
+  values = rep(1,12)
+ ) %>%
+  ggplot( aes (x = Color, 
+               y = values, 
+               fill = Color)) +
+  geom_col() +
+  scale_fill_manual( values = reprex_palette()) +
+  theme_minimal() +
+  labs ( y = NULL, x = NULL, title = "Reprex & Observatory Color Palette") +
+  theme(axis.text.x=element_blank(),
+      axis.ticks.x=element_blank(),
+      axis.text.y=element_blank(),
+      axis.ticks.y=element_blank(), 
+      panel.grid.major = element_blank())
+
+```
+
+```{r, results='asis'}
+kable(
+  data.frame (
+  Color = names(reprex_palette()), 
+  HEX = as.character(reprex_palette())
+ )
+)
+```
+
+## Installation
+
+If you want to use in the palette in R, for example, in ggplot2, you need to install the development version of reprextemplates from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("dataobservatory-eu/reprextemplates")
+```
+
+```{r reprextemplate, echo=TRUE}
+library(reprextemplates)
+reprex_palette()
+```
+
+## Code of Conduct
+  
+Please note that the reprextemplates project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
+# brand_identity_media
